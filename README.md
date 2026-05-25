@@ -8,6 +8,8 @@ This repository stores portable notes and planning documents for internship work
 - `docs/qnn_outline.tsv`: Topic outline extracted from the public QNN documentation tree.
 - `docs/pi0_vla_ros2_deployment_plan.md`: Software-first deployment plan for pi0 VLA, QNN, and ROS2 robot integration.
 - `docs/phase1_qnn_onnx_resnet_runbook.md`: Copy-paste-oriented Phase 1 runbook for ONNX/ResNet float deployment with QNN.
+- `docs/phase1_assets_and_baseline.md`: ResNet model/input collection and ONNX Runtime baseline instructions.
+- `scripts/phase1/`: Download, baseline inference, and QNN-vs-baseline comparison scripts for Phase 1 correctness checks.
 
 ## Notes
 

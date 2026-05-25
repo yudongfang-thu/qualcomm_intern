@@ -111,6 +111,15 @@ wget -O dog.jpg "https://github.com/pytorch/hub/raw/master/images/dog.jpg"
 export IMAGE_PATH="$WORKDIR/images/dog.jpg"
 ```
 
+如果你是从本仓库开始，推荐直接使用配套脚本下载模型、图片、标签，并运行 Python baseline：
+
+```bash
+python scripts/phase1/download_resnet_assets.py
+python scripts/phase1/run_resnet50_onnx_baseline.py
+```
+
+详细说明见 [phase1_assets_and_baseline.md](phase1_assets_and_baseline.md)。
+
 如果公司网络不能访问 GitHub，就用任意一张本地 jpg，并设置：
 
 ```bash
@@ -348,6 +357,16 @@ wc -c "$WORKDIR/inputs/input_0.raw"
 ## 11. 比较 ONNX Runtime 和 QNN host output
 
 QNN output 文件名可能因模型输出 tensor 名不同而不同。下面脚本会自动找第一个 `.raw`：
+
+如果你使用的是本仓库脚本，推荐直接运行：
+
+```bash
+python scripts/phase1/compare_qnn_with_baseline.py \
+  --qnn-output "$WORKDIR/outputs/qnn_host_cpu" \
+  --out "$WORKDIR/outputs/qnn_host_cpu_compare.json"
+```
+
+下面是无脚本版本，方便你在公司机器临时复制：
 
 ```bash
 python3 - <<'PY'
