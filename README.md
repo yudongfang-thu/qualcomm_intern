@@ -6,7 +6,8 @@ This repository stores portable notes and planning documents for internship work
 
 - `docs/QNN_QAIRT_学习笔记.md`: Chinese learning notes for the Qualcomm QNN / QAIRT SDK documentation.
 - `docs/qnn_outline.tsv`: Topic outline extracted from the public QNN documentation tree.
-- `docs/pi0_vla_ros2_deployment_plan.md`: Deployment plan for running a pi0 VLA policy on a robot arm with ROS2.
+- `docs/pi0_vla_ros2_deployment_plan.md`: Software-first deployment plan for pi0 VLA, QNN, and ROS2 robot integration.
+- `docs/phase1_qnn_onnx_resnet_runbook.md`: Copy-paste-oriented Phase 1 runbook for ONNX/ResNet float deployment with QNN.
 
 ## Notes
 
