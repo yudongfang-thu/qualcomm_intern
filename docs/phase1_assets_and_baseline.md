@@ -71,7 +71,33 @@ artifacts/phase1_resnet/baseline/onnxruntime_output.raw
 artifacts/phase1_resnet/baseline/baseline_result.json
 ```
 
-## 5. 本机实测 baseline 结果
+## 5. 验证 Python baseline 是否正确
+
+运行：
+
+```bash
+python scripts/phase1/validate_baseline_pipeline.py
+```
+
+这个验证脚本会检查：
+
+- ONNX 模型能通过 `onnx.checker.check_model`。
+- 模型 input name 是否为 `data`。
+- `input_0.raw` 大小是否为 `1*3*224*224*4 = 602112` bytes。
+- `input_list.txt` 和 `target_input_list.txt` 格式是否正确。
+- `baseline_result.json` 的 input/output shape 和 top-5 是否符合预期。
+- `onnxruntime_output.npy` 和 `onnxruntime_output.raw` 是否逐元素完全一致。
+- 重新跑一遍 ONNX Runtime，确认输出与保存的 baseline 完全一致。
+
+通过时会打印：
+
+```text
+[pass] baseline pipeline validation passed
+```
+
+注意：这个验证能证明“脚本、输入预处理、ONNX Runtime 输出保存”自洽且可复现；它不能替代 QNN 设备侧验证。QNN 设备侧仍然要用 `compare_qnn_with_baseline.py` 对比拉回来的 `.raw`。
+
+## 6. 本机实测 baseline 结果
 
 我在本仓库本机执行过一次，结果如下。你在高通机器上如果下载同一个模型和图片，正常情况下应该得到非常接近的结果。
 
@@ -92,7 +118,7 @@ Top-5：
 | 4 | 257 | Great Pyrenees | 10.184661 |
 | 5 | 260 | chow | 9.860891 |
 
-## 6. 如何接到 QNN 手册
+## 7. 如何接到 QNN 手册
 
 运行完 baseline 后，在 QNN 手册中可以直接设置：
 
@@ -118,7 +144,7 @@ artifacts/phase1_resnet/inputs/input_0.raw
 artifacts/phase1_resnet/inputs/target_input_list.txt
 ```
 
-## 7. QNN output 拉回后的自动对比
+## 8. QNN output 拉回后的自动对比
 
 如果你已经跑完 `qnn-net-run`，并且 QNN 输出目录是：
 
@@ -149,7 +175,7 @@ python scripts/phase1/compare_qnn_with_baseline.py \
 - ONNX Runtime top-k
 - QNN top-k
 
-## 8. 正确性判断
+## 9. 正确性判断
 
 QNN output 拉回后，先比较：
 
@@ -165,7 +191,7 @@ QNN output 拉回后，先比较：
 4. mean/std。
 5. QNN converter 是否改变了输入 layout。
 
-## 9. 资产来源
+## 10. 资产来源
 
 - ONNX ResNet50 v2: <https://github.com/onnx/models/tree/main/validated/vision/classification/resnet>
 - PyTorch Hub sample image: <https://github.com/pytorch/hub/blob/master/images/dog.jpg>
