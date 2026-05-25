@@ -1,0 +1,126 @@
+0	index_QNN.html	QNN	QNN
+1	general_introduction.html	Introduction	QNN > Introduction
+1	QNN_general_overview.html	Overview	QNN > Overview
+1	general_setup.html	Setup	QNN > Setup
+2	linux_setup.html	Linux Setup	QNN > Setup > Linux Setup
+2	windows_setup.html	Windows Setup	QNN > Setup > Windows Setup
+1	backend.html	Backend	QNN > Backend
+2	dsp_backend.html	DSP	QNN > Backend > DSP
+2	htp_backend.html	HTP	QNN > Backend > HTP
+3	htp_qhpi.html	Qualcomm Hexagon Plugin Interface	QNN > Backend > HTP > Qualcomm Hexagon Plugin Interface
+3	common_default_package_ops_usage_examples.html	QNN HTP Op Package - Common Default Package Ops Usage Examples	QNN > Backend > HTP > QNN HTP Op Package - Common Default Package Ops Usage Examples
+3	common_optimization_utility_funcs_usage_examples.html	QNN HTP Optimization Utility Functions Usage Examples	QNN > Backend > HTP > QNN HTP Optimization Utility Functions Usage Examples
+3	htp_core_headers.html	HTP Core Headers for Op Packages	QNN > Backend > HTP > HTP Core Headers for Op Packages
+3	implementing_ops.html	Implementing Ops	QNN > Backend > HTP > Implementing Ops
+3	opPackage_API_version_guide.html	QNN HTP Op Package API Revision History	QNN > Backend > HTP > QNN HTP Op Package API Revision History
+3	optimization_grammar.html	Optimization Grammar	QNN > Backend > HTP > Optimization Grammar
+3	relu_example.html	QNN HTP Op Package - Relu Op Example	QNN > Backend > HTP > QNN HTP Op Package - Relu Op Example
+3	relu_fp16_example.html	QNN HTP-FP16 Op Package - Relu Op Example	QNN > Backend > HTP > QNN HTP-FP16 Op Package - Relu Op Example
+3	scheduling_and_allocation.html	Scheduling and Allocation	QNN > Backend > HTP > Scheduling and Allocation
+3	scratch_buffer.html	Allocate Memory for Scratch Buffers	QNN > Backend > HTP > Allocate Memory for Scratch Buffers
+3	tensors_and_memory_layout.html	Tensors and Memory Layout	QNN > Backend > HTP > Tensors and Memory Layout
+3	writing_op_package.html	Writing QNN HTP Op Package	QNN > Backend > HTP > Writing QNN HTP Op Package
+3	central_migration_guidance.html	General OpPackage Central Migration Guidance	QNN > Backend > HTP > General OpPackage Central Migration Guidance
+3	writing_opPackage_migration_guide.html	Op Package Migration Guide	QNN > Backend > HTP > Op Package Migration Guide
+3	htp_guidelines_low_depth_activations.html	Avoid Low Depth Activations	QNN > Backend > HTP > Avoid Low Depth Activations
+3	htp_guidelines_low_depth_activation_more_examples.html	Avoid Low Depth Activations (more examples)	QNN > Backend > HTP > Avoid Low Depth Activations (more examples)
+3	htp_guidelines_space_to_depth.html	Use Space-to-depth Transformation where possible	QNN > Backend > HTP > Use Space-to-depth Transformation where possible
+3	htp_guidelines_tcm_requirements.html	Reducing TCM Requirements for Performance and Functionality	QNN > Backend > HTP > Reducing TCM Requirements for Performance and Functionality
+3	htp_guidelines_activation_functions.html	Choice of Activation Functions	QNN > Backend > HTP > Choice of Activation Functions
+3	htp_guidelines_channels.html	Number of Channels	QNN > Backend > HTP > Number of Channels
+3	htp_guidelines_a16_vs_fp16.html	Quantized 16 bit activations (A16) vs FP16 and Activation Fusion: Performance and power differences	QNN > Backend > HTP > Quantized 16 bit activations (A16) vs FP16 and Activation Fusion: Performance and power differences
+3	htp_guidelines_int4_weights.html	INT4 encodings for weights	QNN > Backend > HTP > INT4 encodings for weights
+3	htp_guidelines_other_perf.html	Other Performance and Energy Guidelines	QNN > Backend > HTP > Other Performance and Energy Guidelines
+3	htp_yielding.html	HTP Yielding	QNN > Backend > HTP > HTP Yielding
+3	htp_vtcm_sharing.html	HTP VTCM Sharing	QNN > Backend > HTP > HTP VTCM Sharing
+3	htp_vtcm_sharing.html	VTCM Windowing	QNN > Backend > HTP > VTCM Windowing
+3	htp_ssr.html	QNN HTP SSR	QNN > Backend > HTP > QNN HTP SSR
+3	htp_qmem_graph.html	QNN HTP Qmem Graph	QNN > Backend > HTP > QNN HTP Qmem Graph
+2	hta_backend.html	HTA	QNN > Backend > HTA
+2	lpai_backend.html	LPAI	QNN > Backend > LPAI
+2	cpu_backend.html	CPU	QNN > Backend > CPU
+2	gpu_backend.html	GPU	QNN > Backend > GPU
+3	gpu_qnnmem_api_tutorial.html	QNN GPU QnnMem API Tutorial	QNN > Backend > GPU > QNN GPU QnnMem API Tutorial
+3	gpu_tuning_mode_tutorial.html	QNN GPU Tuning Mode Tutorial	QNN > Backend > GPU > QNN GPU Tuning Mode Tutorial
+2	saver_backend.html	Saver	QNN > Backend > Saver
+1	op_packages.html	Op Packages	QNN > Op Packages
+2	generating_op_packages.html	 Generating Op Packages	QNN > Op Packages >  Generating Op Packages
+3	op_package_gen_example.html	QNN Op Package Code Generation	QNN > Op Packages >  Generating Op Packages > QNN Op Package Code Generation
+3	op_def_schema.html	XML OpDef Schema Reference	QNN > Op Packages >  Generating Op Packages > XML OpDef Schema Reference
+3	example_op_defs.html	Example XML OpDef Configs	QNN > Op Packages >  Generating Op Packages > Example XML OpDef Configs
+3	converter_op_package_gen_example.html	QNN Converter Op Package Code Generation	QNN > Op Packages >  Generating Op Packages > QNN Converter Op Package Code Generation
+1	general_tools.html	Tools	QNN > Tools
+1	converters.html	Converters	QNN > Converters
+1	quantization.html	Quantization	QNN > Quantization
+1	applyencodings.html	QAIRT Quantization Specification	QNN > QAIRT Quantization Specification
+1	general_tutorials.html	Tutorials	QNN > Tutorials
+2	tutorial_convert_execute_cnn_model.html	Tutorial: Converting and executing a CNN or ONNX model with QNN	QNN > Tutorials > Tutorial: Converting and executing a CNN or ONNX model with QNN
+3	qnn_tutorial_linux_host.html	CNN to QNN for Linux Host	QNN > Tutorials > Tutorial: Converting and executing a CNN or ONNX model with QNN > CNN to QNN for Linux Host
+4	qnn_tutorial_linux_host_linux_target.html	Convert to QNN for Linux Host on Linux / Android / QNX Target	QNN > Tutorials > Tutorial: Converting and executing a CNN or ONNX model with QNN > CNN to QNN for Linux Host > Convert to QNN for Linux Host on Linux / Android / QNX Target
+5	cpu.html	Convert to QNN for Linux Host on CPU Backend	QNN > Tutorials > Tutorial: Converting and executing a CNN or ONNX model with QNN > CNN to QNN for Linux Host > Convert to QNN for Linux Host on Linux / Android / QNX Target > Convert to QNN for Linux Host on CPU Backend
+5	qnn_tutorial_linux_host_linux_target_gpu.html	Convert to QNN for Linux Host on GPU Backend	QNN > Tutorials > Tutorial: Converting and executing a CNN or ONNX model with QNN > CNN to QNN for Linux Host > Convert to QNN for Linux Host on Linux / Android / QNX Target > Convert to QNN for Linux Host on GPU Backend
+5	dsp.html	Convert to QNN for Linux Host on DSP Backend	QNN > Tutorials > Tutorial: Converting and executing a CNN or ONNX model with QNN > CNN to QNN for Linux Host > Convert to QNN for Linux Host on Linux / Android / QNX Target > Convert to QNN for Linux Host on DSP Backend
+5	qnn_tutorial_linux_host_linux_target_htp.html	Convert to QNN for Linux Host on HTP Backend	QNN > Tutorials > Tutorial: Converting and executing a CNN or ONNX model with QNN > CNN to QNN for Linux Host > Convert to QNN for Linux Host on Linux / Android / QNX Target > Convert to QNN for Linux Host on HTP Backend
+5	lpai.html	Convert to QNN for Linux Host on LPAI Backend	QNN > Tutorials > Tutorial: Converting and executing a CNN or ONNX model with QNN > CNN to QNN for Linux Host > Convert to QNN for Linux Host on Linux / Android / QNX Target > Convert to QNN for Linux Host on LPAI Backend
+4	qnn_tutorial_linux_host_windows_target.html	CNN to QNN for Linux Host on Windows Target	QNN > Tutorials > Tutorial: Converting and executing a CNN or ONNX model with QNN > CNN to QNN for Linux Host > CNN to QNN for Linux Host on Windows Target
+3	onnx_to_qnn_tutorial_linux_host.html	ONNX to QNN for Linux Host	QNN > Tutorials > Tutorial: Converting and executing a CNN or ONNX model with QNN > ONNX to QNN for Linux Host
+4	qnn_tutorial_linux_host_linux_target.html	Convert to QNN for Linux Host on Linux / Android / QNX Target	QNN > Tutorials > Tutorial: Converting and executing a CNN or ONNX model with QNN > ONNX to QNN for Linux Host > Convert to QNN for Linux Host on Linux / Android / QNX Target
+5	cpu.html	Convert to QNN for Linux Host on CPU Backend	QNN > Tutorials > Tutorial: Converting and executing a CNN or ONNX model with QNN > ONNX to QNN for Linux Host > Convert to QNN for Linux Host on Linux / Android / QNX Target > Convert to QNN for Linux Host on CPU Backend
+5	qnn_tutorial_linux_host_linux_target_gpu.html	Convert to QNN for Linux Host on GPU Backend	QNN > Tutorials > Tutorial: Converting and executing a CNN or ONNX model with QNN > ONNX to QNN for Linux Host > Convert to QNN for Linux Host on Linux / Android / QNX Target > Convert to QNN for Linux Host on GPU Backend
+5	dsp.html	Convert to QNN for Linux Host on DSP Backend	QNN > Tutorials > Tutorial: Converting and executing a CNN or ONNX model with QNN > ONNX to QNN for Linux Host > Convert to QNN for Linux Host on Linux / Android / QNX Target > Convert to QNN for Linux Host on DSP Backend
+5	qnn_tutorial_linux_host_linux_target_htp.html	Convert to QNN for Linux Host on HTP Backend	QNN > Tutorials > Tutorial: Converting and executing a CNN or ONNX model with QNN > ONNX to QNN for Linux Host > Convert to QNN for Linux Host on Linux / Android / QNX Target > Convert to QNN for Linux Host on HTP Backend
+5	lpai.html	Convert to QNN for Linux Host on LPAI Backend	QNN > Tutorials > Tutorial: Converting and executing a CNN or ONNX model with QNN > ONNX to QNN for Linux Host > Convert to QNN for Linux Host on Linux / Android / QNX Target > Convert to QNN for Linux Host on LPAI Backend
+4	qnn_tutorial_linux_host_windows_target.html	CNN to QNN for Linux Host on Windows Target	QNN > Tutorials > Tutorial: Converting and executing a CNN or ONNX model with QNN > ONNX to QNN for Linux Host > CNN to QNN for Linux Host on Windows Target
+3	qnn_tutorial_windows_host.html	CNN to QNN for Windows Host	QNN > Tutorials > Tutorial: Converting and executing a CNN or ONNX model with QNN > CNN to QNN for Windows Host
+4	qnn_tutorial_windows_host_linux_target.html	CNN to QNN for Windows Host on Linux Target	QNN > Tutorials > Tutorial: Converting and executing a CNN or ONNX model with QNN > CNN to QNN for Windows Host > CNN to QNN for Windows Host on Linux Target
+4	qnn_tutorial_windows_host_windows_target.html	CNN to QNN for Windows Host on Windows Target	QNN > Tutorials > Tutorial: Converting and executing a CNN or ONNX model with QNN > CNN to QNN for Windows Host > CNN to QNN for Windows Host on Windows Target
+2	tutorial_sample_app_linux.html	How to Use the Sample App	QNN > Tutorials > How to Use the Sample App
+2	sample_app.html	Sample App Tutorial	QNN > Tutorials > Sample App Tutorial
+2	saver_tutorial.html	Saver Tutorial: Save execution sequence with Saver and replay on a backend	QNN > Tutorials > Saver Tutorial: Save execution sequence with Saver and replay on a backend
+2	htp_shared_buffer_tutorial.html	QNN HTP Shared Buffer Tutorial	QNN > Tutorials > QNN HTP Shared Buffer Tutorial
+2	tutorial1.html	Tutorial: Executing a shallow model using custom op package	QNN > Tutorials > Tutorial: Executing a shallow model using custom op package
+2	hexnn_migration.html	Migrating from Hexagon-nn	QNN > Tutorials > Migrating from Hexagon-nn
+1	benchmarking.html	Benchmarking	QNN > Benchmarking
+1	operations.html	Operations	QNN > Operations
+2	SupportedOps.html	Supported Operations	QNN > Operations > Supported Operations
+2	opdef_version_history.html	Op Definition Revision History	QNN > Operations > Op Definition Revision History
+2	opdef_version_history.html	Backend Specific Revision History	QNN > Operations > Backend Specific Revision History
+3	cpu_opdef_version_history.html	QNN CPU Op Definition Revision History	QNN > Operations > Backend Specific Revision History > QNN CPU Op Definition Revision History
+3	dsp_opdef_version_history.html	QNN DSP Op Definition Revision History	QNN > Operations > Backend Specific Revision History > QNN DSP Op Definition Revision History
+3	gpu_opdef_version_history.html	QNN GPU Op Definition Revision History	QNN > Operations > Backend Specific Revision History > QNN GPU Op Definition Revision History
+3	hta_opdef_version_history.html	QNN HTA Op Definition Revision History	QNN > Operations > Backend Specific Revision History > QNN HTA Op Definition Revision History
+3	htp_opdef_version_history.html	QNN HTP Op Definition Revision History	QNN > Operations > Backend Specific Revision History > QNN HTP Op Definition Revision History
+3	lpai_opdef_version_history.html	QNN LPAI Op Definition Revision History	QNN > Operations > Backend Specific Revision History > QNN LPAI Op Definition Revision History
+2	terminology.html	Common Terminology	QNN > Operations > Common Terminology
+2	MasterOpDef.html	Master Definitions	QNN > Operations > Master Definitions
+2	blockop_overview.html	Block Op Overview	QNN > Operations > Block Op Overview
+2	blockop_usage.html	Block Op Usage	QNN > Operations > Block Op Usage
+3	blockop_onnx_usage.html	Block Ops ONNX Usage	QNN > Operations > Block Op Usage > Block Ops ONNX Usage
+3	blockop_onnx_usage.html	Buffer Usage	QNN > Operations > Block Op Usage > Buffer Usage
+3	blockop_onnx_usage.html	MaskedSoftmax Usage	QNN > Operations > Block Op Usage > MaskedSoftmax Usage
+3	blockop_onnx_usage.html	StatefulGru Usage	QNN > Operations > Block Op Usage > StatefulGru Usage
+3	blockop_onnx_usage.html	StatefulLstm Usage	QNN > Operations > Block Op Usage > StatefulLstm Usage
+2	blockop_definitions.html	Block Op Definitions	QNN > Operations > Block Op Definitions
+2	CpuOpDefSupplement.html	CPU	QNN > Operations > CPU
+2	DspOpDefSupplement.html	DSP	QNN > Operations > DSP
+2	GpuOpDefSupplement.html	GPU	QNN > Operations > GPU
+2	HtpOpDefSupplement.html	HTP	QNN > Operations > HTP
+2	HtaOpDefSupplement.html	HTA	QNN > Operations > HTA
+2	LpaiOpDefSupplement.html	LPAI	QNN > Operations > LPAI
+1	general_api.html	API	QNN > API
+2	api_overview.html	Overview	QNN > API > Overview
+2	api_usage_guidelines.html	Usage Guidelines	QNN > API > Usage Guidelines
+2	general_api_version_history.html	QNN API Revision History	QNN > API > QNN API Revision History
+2	general_api_version_history.html	Backend Specific Revision History	QNN > API > Backend Specific Revision History
+3	cpu_api_version_history.html	CPU Version History	QNN > API > Backend Specific Revision History > CPU Version History
+3	dsp_api_version_history.html	DSP Version History	QNN > API > Backend Specific Revision History > DSP Version History
+3	gpu_api_version_history.html	GPU Version History	QNN > API > Backend Specific Revision History > GPU Version History
+3	hta_api_version_history.html	HTA Version History	QNN > API > Backend Specific Revision History > HTA Version History
+3	htp_api_version_history.html	HTP Version History	QNN > API > Backend Specific Revision History > HTP Version History
+3	lpai_api_version_history.html	LPAI Version History	QNN > API > Backend Specific Revision History > LPAI Version History
+2	general_api_version_history.html	QNN System API Revision History	QNN > API > QNN System API Revision History
+2	supported_api.html	Supported APIs	QNN > API > Supported APIs
+2	supported_capabilities.html	Supported Capabilities	QNN > API > Supported Capabilities
+2	api_error_codes.html	Error codes	QNN > API > Error codes
+1	general_glossary.html	Glossary	QNN > Glossary
+1	general_revision_history.html	Revision History	QNN > Revision History
