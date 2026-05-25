@@ -4,6 +4,8 @@
 > 推荐顺序：host CPU float -> Qualcomm target CPU float -> INT8 quantization -> HTP。  
 > 这份文档尽量写成可以逐条复制的命令。你只需要先改少数几个路径变量。
 
+开始前建议先完成开发环境配置：[qnn_development_environment_setup.md](qnn_development_environment_setup.md)。
+
 ## 0. 你要先知道的 4 件事
 
 1. `qnn-onnx-converter`：把 ONNX 模型转成 QNN C++ 源码和权重文件，输出一般是 `.cpp` 和 `.bin`。
