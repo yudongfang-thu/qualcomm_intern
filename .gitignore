@@ -1,5 +1,14 @@
+LOCAL_ONLY.md
+private/
+journal_private/
+daily_private/
+*.private.md
+*.local.md
+
 artifacts/
 .venv/
+.DS_Store
+.idea/
+.vscode/
 __pycache__/
 *.pyc
-
