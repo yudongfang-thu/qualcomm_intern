@@ -235,6 +235,7 @@ camera/state -> observation -> pi0/QNN policy -> action -> safety filter -> robo
 
 - `scripts/qnn_docs/`
   本地抓取 QNN 文档、建立 SQLite FTS 数据库、检索文档的工具。输出只放在 `artifacts/qnn_docs/`。
+  其中 `smart_search_qnn_docs.py` 可把中文/自然语言问题扩展为多组 QNN 英文关键词并合并检索结果。
 
 ## 仓库约定
 

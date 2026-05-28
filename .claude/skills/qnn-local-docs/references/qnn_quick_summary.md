@@ -15,6 +15,7 @@
 ```bash
 python scripts/qnn_docs/fetch_qnn_docs.py
 python scripts/qnn_docs/build_qnn_doc_db.py
+python scripts/qnn_docs/smart_search_qnn_docs.py "HTP 怎么跑模型，需要量化吗" --show-queries
 python scripts/qnn_docs/search_qnn_docs.py "qnn-net-run backend" --limit 5
 ```
 
@@ -42,10 +43,12 @@ artifacts/qnn_docs/qnn_docs.sqlite
 ## 常用搜索词
 
 ```bash
+python scripts/qnn_docs/smart_search_qnn_docs.py "qnn 环境怎么配置，Python 依赖怎么装" --show-queries
+python scripts/qnn_docs/smart_search_qnn_docs.py "ONNX 模型怎么转 QNN 并运行" --show-queries
+python scripts/qnn_docs/smart_search_qnn_docs.py "HTP 怎么跑模型，需要量化吗" --show-queries
 python scripts/qnn_docs/search_qnn_docs.py "qnn-onnx-converter input_network input_dim preserve_io"
 python scripts/qnn_docs/search_qnn_docs.py "qnn-model-lib-generator target output library"
 python scripts/qnn_docs/search_qnn_docs.py "qnn-net-run input_list backend output_dir"
 python scripts/qnn_docs/search_qnn_docs.py "HTP DSP target devices MUST use quantized models"
 python scripts/qnn_docs/search_qnn_docs.py "envsetup check-python-dependency envcheck"
 ```
-

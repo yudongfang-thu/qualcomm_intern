@@ -34,7 +34,23 @@ bash scripts/qnn_docs/qnn_docs_pipeline.sh
 
 ## Search Workflow
 
-Search the database before answering detailed QNN questions:
+For Chinese or natural-language questions, start with smart search. It expands the question into several QNN keyword queries, searches each one, and merges results:
+
+```bash
+python scripts/qnn_docs/smart_search_qnn_docs.py "HTP 怎么跑模型，需要量化吗" --show-queries --limit 8
+python scripts/qnn_docs/smart_search_qnn_docs.py "qnn 环境怎么配置，Python 依赖怎么装" --show-queries --limit 8
+```
+
+If the first results are weak, add one or two explicit keyword queries:
+
+```bash
+python scripts/qnn_docs/smart_search_qnn_docs.py "HTP 怎么跑模型" \
+  --query "libQnnHtp.so retrieve_context" \
+  --query "HTP quantized input_list context binary" \
+  --limit 8
+```
+
+For exact keyword lookup, use direct search:
 
 ```bash
 python scripts/qnn_docs/search_qnn_docs.py "qnn-net-run backend" --limit 8
@@ -53,6 +69,7 @@ python scripts/qnn_docs/search_qnn_docs.py "check-python-dependency envsetup" --
 - Answer in Chinese by default.
 - Prefer copy-pasteable commands.
 - Mention the local page title/source URL when making a specific documentation claim.
+- Treat smart search as retrieval only; still read the snippets/pages and reason before answering.
 - If the local database is missing and cannot be fetched, fall back to the repository's original Chinese summaries in `docs/`.
 - Keep the main development principle visible: first correctness, then performance.
 
@@ -64,4 +81,3 @@ For concise project context, read:
 - `docs/phase1_qnn_onnx_resnet_runbook.md`
 - `docs/qnn_backend_inference_modes.md`
 - `.claude/skills/qnn-local-docs/references/qnn_quick_summary.md`
-

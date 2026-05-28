@@ -74,6 +74,14 @@ python scripts/qnn_docs/build_qnn_doc_db.py
 python scripts/qnn_docs/search_qnn_docs.py "qnn-net-run backend input_list" --limit 5
 ```
 
+自然语言/中文智能检索：
+
+```bash
+python scripts/qnn_docs/smart_search_qnn_docs.py "HTP 怎么跑模型，需要量化吗" --show-queries --limit 8
+```
+
+它不会调用外部 LLM/API，只会用内置 QNN 词表把中文问题扩展成多组英文关键词，然后批量检索 SQLite FTS 并合并结果。
+
 看完整页面：
 
 ```bash
@@ -103,6 +111,9 @@ Skill 放在：
 ## 5. 常用搜索示例
 
 ```bash
+python scripts/qnn_docs/smart_search_qnn_docs.py "qnn 环境怎么配置，Python 依赖怎么装" --show-queries
+python scripts/qnn_docs/smart_search_qnn_docs.py "ONNX 模型怎么转 QNN 并运行" --show-queries
+python scripts/qnn_docs/smart_search_qnn_docs.py "HTP 怎么跑模型，需要量化吗" --show-queries
 python scripts/qnn_docs/search_qnn_docs.py "QNN_SDK_ROOT envsetup check-python-dependency"
 python scripts/qnn_docs/search_qnn_docs.py "qnn-onnx-converter input_network output_path"
 python scripts/qnn_docs/search_qnn_docs.py "qnn-model-lib-generator target architecture"
