@@ -198,6 +198,9 @@ camera/state -> observation -> pi0/QNN policy -> action -> safety filter -> robo
 - `docs/qnn_development_environment_setup.md`
   QNN/QAIRT Linux host、Android/Linux target、Python venv、NDK、envcheck 配置手册。
 
+- `docs/qnn_local_docs_skill.md`
+  本地抓取 Qualcomm QNN 文档、建立 SQLite 搜索库、配合 Claude Code skill 使用的说明。
+
 - `docs/phase1_assets_and_baseline.md`
   ResNet 模型、样例输入、Python ONNX Runtime baseline、baseline 验证流程。
 
@@ -229,6 +232,9 @@ camera/state -> observation -> pi0/QNN policy -> action -> safety filter -> robo
 
 - `scripts/phase1/compare_qnn_with_baseline.py`
   对比 QNN `.raw` output 和 ONNX Runtime baseline。
+
+- `scripts/qnn_docs/`
+  本地抓取 QNN 文档、建立 SQLite FTS 数据库、检索文档的工具。输出只放在 `artifacts/qnn_docs/`。
 
 ## 仓库约定
 
