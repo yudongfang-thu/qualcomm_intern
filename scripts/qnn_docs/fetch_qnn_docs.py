@@ -9,6 +9,7 @@ from __future__ import annotations
 
 import argparse
 import html
+import http.client
 import re
 import sys
 import time
@@ -144,7 +145,7 @@ def read_outline(path: Path) -> list[Topic]:
     return list(seen.values())
 
 
-def fetch_url(url: str, referer: str, timeout: int) -> str:
+def fetch_url(url: str, referer: str, timeout: int, retries: int, retry_sleep: float) -> str:
     request = urllib.request.Request(
         url,
         headers={
@@ -153,8 +154,19 @@ def fetch_url(url: str, referer: str, timeout: int) -> str:
             "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
         },
     )
-    with urllib.request.urlopen(request, timeout=timeout) as response:
-        return response.read().decode("utf-8", errors="replace")
+    last_error: Exception | None = None
+    for attempt in range(1, retries + 1):
+        try:
+            with urllib.request.urlopen(request, timeout=timeout) as response:
+                return response.read().decode("utf-8", errors="replace")
+        except (http.client.IncompleteRead, TimeoutError, urllib.error.URLError) as exc:
+            last_error = exc
+            if attempt == retries:
+                break
+            print(f"[retry] {attempt}/{retries} {url}: {exc}", file=sys.stderr)
+            time.sleep(retry_sleep * attempt)
+    assert last_error is not None
+    raise last_error
 
 
 def extract_article(raw_html: str) -> str:
@@ -191,6 +203,8 @@ def main() -> int:
     parser.add_argument("--referer", default=DEFAULT_REFERER)
     parser.add_argument("--sleep", type=float, default=0.08)
     parser.add_argument("--timeout", type=int, default=30)
+    parser.add_argument("--retries", type=int, default=4)
+    parser.add_argument("--retry-sleep", type=float, default=1.0)
     parser.add_argument("--limit", type=int, default=0, help="Fetch only the first N topics for testing")
     parser.add_argument("--force", action="store_true", help="Re-fetch existing HTML pages")
     args = parser.parse_args()
@@ -221,7 +235,7 @@ def main() -> int:
                 status = "cached"
             else:
                 print(f"[{index}/{len(topics)}] fetch {topic.topic_id}", file=sys.stderr)
-                raw = fetch_url(url, args.referer, args.timeout)
+                raw = fetch_url(url, args.referer, args.timeout, args.retries, args.retry_sleep)
                 html_path.write_text(raw, encoding="utf-8")
                 status = "fetched"
                 time.sleep(args.sleep)
@@ -253,4 +267,3 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-
