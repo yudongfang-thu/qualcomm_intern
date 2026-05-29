@@ -199,7 +199,7 @@ camera/state -> observation -> pi0/QNN policy -> action -> safety filter -> robo
   QNN/QAIRT Linux host、Android/Linux target、Python venv、NDK、envcheck 配置手册。
 
 - `docs/qnn_local_docs_skill.md`
-  本地抓取 Qualcomm QNN 文档、建立 SQLite 搜索库、配合 Claude Code skill 使用的说明。
+  本地抓取 Qualcomm QNN 文档、建立 SQLite 搜索库、配合 Claude Code / Codex skill 使用的说明。
 
 - `docs/phase1_assets_and_baseline.md`
   ResNet 模型、样例输入、Python ONNX Runtime baseline、baseline 验证流程。
@@ -236,6 +236,9 @@ camera/state -> observation -> pi0/QNN policy -> action -> safety filter -> robo
 - `scripts/qnn_docs/`
   本地抓取 QNN 文档、建立 SQLite FTS 数据库、检索文档的工具。输出只放在 `artifacts/qnn_docs/`。
   其中 `smart_search_qnn_docs.py` 可把中文/自然语言问题扩展为多组 QNN 英文关键词并合并检索结果。
+
+- `.claude/skills/qnn-local-docs/` 和 `.codex/skills/qnn-local-docs/`
+  面向 Claude Code / Codex 的本地 QNN 手册检索 skill，只保存检索流程和原创摘要，不保存原始手册镜像。
 
 ## 仓库约定
 

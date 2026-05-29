@@ -1,0 +1,4 @@
+interface:
+  display_name: "QNN Local Docs"
+  short_description: "Search local QNN docs and answer in Chinese"
+  default_prompt: "Use $qnn-local-docs to answer my QNN deployment question from the local documentation database."
